@@ -96,8 +96,3 @@ As seguintes ferramentas foram usadas na construção do projeto:<br>
     "random-key-generator": "^1.2.3",
     "sequelize": "^6.6.2"
   }</code>
-
-
-
-
-
