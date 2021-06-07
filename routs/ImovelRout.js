@@ -142,6 +142,29 @@ router.post('/update/:id', token.get, ( req, res ) => {
 	})
 })
 
+/*
+	Exclui um registro da tabela 'imoveis' pelo campo idMask
+	Rota: /imovel/delete/id Method: GET Access: PRIVATE
+*/
+router.get('/delete/:id', token.get, ( req, res ) => {
+
+	const where = {
+		idMask: req.params.id
+	}
+
+	imovelModel.delete( where ).then( result => {
+
+		if ( result != null ) {
+			//Imóvel atualizado com sucesso
+			res.send( { message: msn.ok_update() } )
+
+		}else{
+			//Ocorreu um erro. Tenta mais tarde.
+			res.send( { message: msn.error_try_later() } )
+		}
+	})
+})
+
 
 /*	################ DANGEROUS ROUTE ################################################
 	Atualizar todos os registros da tabela 'imoveis' sem NEHUMA CLAUSULA (CUIDADO!!!)
