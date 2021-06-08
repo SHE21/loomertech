@@ -17,11 +17,11 @@ Concluído
 <h2 align="left">Primeiro paço</h2>
 Configure a conexão com o banco de dados no arquivo <code>database/Connection.js</code>.<br>
 <code>const config = {<br>
-	database: 'loomertech',<br>
-	user: 'root',<br>
-	password: '',<br>
-	host: 'localhost',<br>
-	dialect: 'mysql'<br>
+    database: 'loomertech',<br>
+    user: 'root',<br>
+    password: '',<br>
+    host: 'localhost',<br>
+    dialect: 'mysql'<br>
 }</code>
 
 <h2 align="left">Demonstração</h2>
