@@ -19,7 +19,7 @@ app.use(bodyparser.json())
 //Configurando sessions
 app.use(session({
 	secret: "Armagedom2321@",
-	cookie: {maxAge:60000000000},
+	cookie: {maxAge:600000000},
 	resave: true,
 	saveUninitialized: true
 }))
