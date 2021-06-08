@@ -15,7 +15,7 @@ const router = express.Router()
 	Cadastra um imóvel na tabela 'imoveis'.
 	Rota: /imovel/put/ Method: POST Access: PRIVATE
 */
-router.post('/put', token.get, (req, res) => {
+router.post('/put', token.get, ( req, res ) => {
 
 	//Obtem dados da requisição, já populando o objeto
 	const newImovel = {
@@ -33,11 +33,11 @@ router.post('/put', token.get, (req, res) => {
 
 		if ( result != null ) {
 			//Imóvel cadastrado com sucesso
-			res.send( { message: msn.ok_imovel_register() } )
+			res.json( { message: msn.ok_imovel_register() } )
 
 		}else{
 			//Ocorreu um erro. Tenta mais tarde.
-			res.send( { message: msn.error_try_later()} )
+			res.json( { message: msn.error_try_later()} )
 		}
 	})
 
@@ -47,7 +47,7 @@ router.post('/put', token.get, (req, res) => {
 	Retorna todos os registros da tabela 'imoveis'.
 	Rota: /imovel/get/ Method: GET Access: PRIVATE
 */
-router.get('/get', token.get, (req, res) =>{
+router.get('/get', token.get, ( req, res ) =>{
 
 	//Retorna todos os imoveis da table 'imoveis'
 	imovelModel.getAll().then( result => {
@@ -61,7 +61,7 @@ router.get('/get', token.get, (req, res) =>{
 	Resulta em todos os imoveis que tenham em comum um cep.
 	Rota: /imovel/get/cep/65290000 Method: GET Access: PRIVATE
 */
-router.get('/get/cep/:cep', token.get, (req, res) => {
+router.get('/get/cep/:cep', token.get, ( req, res ) => {
 
 	//Popula dados da requisição
 	const imovel = {
@@ -70,7 +70,7 @@ router.get('/get/cep/:cep', token.get, (req, res) => {
 
 	//Consulta tabela 'imoveis' 
 	imovelModel.findOne(imovel).then( result => {
-		res.send(result)
+		res.json(result)
 	})
 	
 })
@@ -80,14 +80,14 @@ router.get('/get/cep/:cep', token.get, (req, res) => {
 	Resulta em todos os imoveis com numero x de quartos.
 	Rota: /imovel/get/rooms/3 Method: GET Access: PRIVATE
 */
-router.get('/get/rooms/:rooms', token.get, (req, res) =>{
+router.get('/get/rooms/:rooms', token.get, ( req, res ) =>{
 
 	const imovel = {
 		numb_rooms: req.params.rooms
 	}
 
 	imovelModel.findOne(imovel).then( result => {
-		res.send(result)
+		res.json(result)
 	})
 	
 })
@@ -105,7 +105,7 @@ router.get('/get/avaliable/:avaliable', token.get, ( req, res ) =>{
 	}
 
 	imovelModel.findOne(imovel).then( result => {
-		res.send(result)
+		res.json(result)
 	})
 	
 })
@@ -133,11 +133,11 @@ router.post('/update/:id', token.get, ( req, res ) => {
 
 		if ( result != null ) {
 			//Imóvel atualizado com sucesso
-			res.send( { message: msn.ok_update() } )
+			res.json( { message: msn.ok_update() } )
 
 		}else{
 			//Ocorreu um erro. Tenta mais tarde.
-			res.send( { message: msn.error_try_later() } )
+			res.json( { message: msn.error_try_later() } )
 		}
 	})
 })
@@ -156,11 +156,11 @@ router.get('/delete/:id', token.get, ( req, res ) => {
 
 		if ( result != null ) {
 			//Imóvel atualizado com sucesso
-			res.send( { message: msn.ok_update() } )
+			res.json( { message: msn.ok_update() } )
 
 		}else{
 			//Ocorreu um erro. Tenta mais tarde.
-			res.send( { message: msn.error_try_later() } )
+			res.json( { message: msn.error_try_later() } )
 		}
 	})
 })
@@ -186,11 +186,11 @@ router.post('/update/all', token.get, (req, res) => {
 
 		if ( result != null ) {
 			//Imóveis atualizado com sucesso
-			res.send( { message: msn.ok_update() } )
+			res.json( { message: msn.ok_update() } )
 
 		}else{
 			//Ocorreu um erro. Tenta mais tarde.
-			res.send( { message: msn.error_try_later() } )
+			res.json( { message: msn.error_try_later() } )
 		}
 
 	})
