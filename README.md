@@ -61,7 +61,7 @@ Listando todos os imóveis com determinado número de quartos: <code>root/imovel
 Ex.: <code>root/imovel/get/rooms/2</code><br>
 
 Listando todos os imóveis disponíveis para aluguel: <code>root/imovel/get/avaliable/{avaliable}</code><br>
-Ex.: <code>root/imovel/get/avaliable/true</code><br>
+Ex.: <code>root/imovel/get/avaliable/1</code><br>
 
 <b>Atualizar de imóvel</b> <i>(operação restrita a usuário logado)</i><br>
 Acesse a rota <code>root/imovel/update/{id}</code> e envie como parâmetro via <code>POST</code> o <code>idMask</code>:<br>
