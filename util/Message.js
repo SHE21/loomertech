@@ -45,6 +45,11 @@ class Message{
 		return msn
 	}
 
+	static no_result(){
+		const msn = 'Nenhum resultado para esta busca!'
+		return msn
+	}
+
 	static ok_server(){
 		const msn = 'Conectado so Servidor'
 		return msn

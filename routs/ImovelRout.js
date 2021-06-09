@@ -87,7 +87,20 @@ router.get('/get/rooms/:rooms', token.get, ( req, res ) =>{
 	}
 
 	imovelModel.findOne(imovel).then( result => {
-		res.json(result)
+
+		if ( result != null) {
+
+			if (result.length > 0){
+				res.json(result)
+
+			}else{
+				res.json({ msn: msn.no_result() })
+
+			}
+
+		}else{
+			res.json({ msn: msn.error_try_later() } )
+		}
 	})
 	
 })
