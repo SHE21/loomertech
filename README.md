@@ -80,7 +80,9 @@ O Postman foi o ambiente de teste usado para consumir a API.
 Algumas config do Postman:<br>
 No Header:<br>
 <code>Content-Type : application/json</code>
-<code>x-access-token : aqui token gerado depois de login</code>
+<code>x-access-token : aqui token gerado depois de login</code><br>
+No Body:<br>
+Marque a opção: <code>x-www-form-urlencoded</code>
 
 <h2>Tecnologias</h2>
 As seguintes ferramentas foram usadas na construção do projeto:<br>
