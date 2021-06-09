@@ -87,7 +87,7 @@ Marque a opção: <code>x-www-form-urlencoded</code>
 <h2>Tecnologias</h2>
 As seguintes ferramentas foram usadas na construção do projeto:<br>
 <li>JavaScript</li>
-<li>NodeJs</li>
+<li>Node Js</li>
 <br>
 
 <b>Dependências do projeto</br><br>
