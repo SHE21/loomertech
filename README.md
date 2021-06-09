@@ -75,6 +75,13 @@ Ex.: <code>root/imovel/delete/idugjdx4wdc1czkf1y</code>
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 Node.js versão mais recente.
 
+<h2>Ambiente de Teste</h2>
+O Postman foi o ambiente de teste usado para consumir a API.
+Algumas config do Postman:<br>
+No Header:<br>
+<code>Content-Type : application/json</code>
+<code>x-access-token : aqui token gerado depois de login</code>
+
 <h2>Tecnologias</h2>
 As seguintes ferramentas foram usadas na construção do projeto:<br>
 <li>JavaScript</li>
